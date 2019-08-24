@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--直接进入的页面-->
+    <welcome-file-list>
+        <welcome-file>/jsp/articleList.jsp</welcome-file>
+    </welcome-file-list>
+
+
+
+<servlet>
+    <servlet-name>articleList</servlet-name>
+    <servlet-class>com.xy.blog.servlet.ArticleListServlet</servlet-class>
+</servlet>
+
+    <servlet-mapping>
+        <servlet-name>articleList</servlet-name>
+        <url-pattern>/articleList</url-pattern>
+
+    </servlet-mapping>
+
+</web-app>
