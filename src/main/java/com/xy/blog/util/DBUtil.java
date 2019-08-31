@@ -14,6 +14,7 @@ public class DBUtil {
     private static final String URL = "jdbc:mysql://localhost:3306/blogdemo";
     private static final String USER_NAME = "root";
     private static final String PASSWORD = "123456";
+/*    private static final String PASSWORD = "XYmax666@163.com";*/
 
 
     private static volatile DataSource DATASOURCE;
@@ -24,10 +25,7 @@ public class DBUtil {
 
     public static DataSource getDATASOURCE() {
         if (DATASOURCE == null) {
-//          synchronized (DATASOURCE){
-//         synchronized (DATASOURCE.getClass()) {
             synchronized (DBUtil.class) {
-
                 if (DATASOURCE == null) {
                     DATASOURCE = new MysqlDataSource();
                     ((MysqlDataSource) DATASOURCE).setURL(URL);
@@ -68,9 +66,5 @@ public class DBUtil {
             throw new SystemException("数据库出错误");
 
         }
-
-
     }
-
-
 }
